@@ -45,6 +45,14 @@
       (set-buffer old-buffer)
       buffer)))
 
+(defun send-buffer-to-term nil
+  "Send whole buffer to term."
+  (interactive)
+  (unless (get-buffer *term-buf-name*)
+    (new-term-buffer *term-buf-name* *shell-path*))
+  (send-string *term-buf-name* (buffer-substring-no-properties 1
+                                                               (buffer-end 1)))
+  (send-string *term-buf-name* "\n"))
 
 (provide 'send-term)
 ;;; send-term.el ends here
