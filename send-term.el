@@ -68,6 +68,12 @@
   (interactive)
   (copy-to-buffer *term-buf-name* 1 1))
 
+(defun send-term/bind-key nil
+  (interactive)
+  (local-set-key (kbd "C-c l") 'send-term/send-line-to-term)
+  (local-set-key (kbd "C-c r") 'send-term/send-region)
+  (local-set-key (kbd "C-c b") 'send-term/send-buffer-to-term))
+
 
 (provide 'send-term)
 ;;; send-term.el ends here
