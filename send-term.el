@@ -45,7 +45,7 @@
       (set-buffer old-buffer)
       buffer)))
 
-(defun send-buffer-to-term nil
+(defun send-term/send-buffer-to-term nil
   "Send whole buffer to term."
   (interactive)
   (unless (get-buffer *term-buf-name*)
