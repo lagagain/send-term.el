@@ -54,7 +54,7 @@
                                                                (buffer-end 1)))
   (send-string *term-buf-name* "\n"))
 
-(defun send-line-to-term nil
+(defun send-term/send-line-to-term nil
   "Send current line to term"
   (interactive)
   (unless (get-buffer *term-buf-name*)
