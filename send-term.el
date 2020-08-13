@@ -20,7 +20,7 @@
   (interactive)
   (setf *shell-path* (read-string "shell path: ")))
 
-(defun set-terminal-name ()
+(defun send-term/set-terminal-name ()
   "Set the terminal buffer NAME, default is *terminal*."
   (interactive)
   (setf *term-buf-name* (read-string "New name: ")))
