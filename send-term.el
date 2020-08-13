@@ -63,7 +63,7 @@
                                                                  (line-end-position)))
     (send-string *term-buf-name* "\n")))
 
-(defun clean-term-buffer nil
+(defun send-term/clean-term-buffer nil
   "Clean terminal buffer."
   (interactive)
   (copy-to-buffer *term-buf-name* 1 1))
