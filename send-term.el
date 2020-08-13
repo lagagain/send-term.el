@@ -60,7 +60,8 @@
   (unless (get-buffer *term-buf-name*)
     (new-term-buffer *term-buf-name* *shell-path*)
     (send-string *term-buf-name* (buffer-substring-no-properties (line-beginning-position)
-                                                                 (line-end-position)))))
+                                                                 (line-end-position)))
+    (send-string *term-buf-name* "\n")))
 
 (defun clean-term-buffer nil
   "Clean terminal buffer."
