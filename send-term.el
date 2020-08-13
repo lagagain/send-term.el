@@ -33,7 +33,7 @@
   (send-string *term-buf-name* (buffer-substring-no-properties (region-beginning) (region-end)))
   (send-string *term-buf-name* "\n"))
 
-(defun new-term-buffer (&optional buffer-name shell-path)
+(defun send-term/new-term-buffer (&optional buffer-name shell-path)
   "New a buffer with BUFFER-NAME, and use (term SHELL-PATH)."
   (let ((old-buffer (current-buffer)))
     (setf buffer-name (or buffer-name *term-buf-name*)
