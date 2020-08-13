@@ -15,7 +15,7 @@
 ;;; Code:
 ;;;   functions
 ;;;----------------
-(defun set-shell-path ()
+(defun send-term/set-shell-path ()
   "Set the shell path when new a termianl buffer will use."
   (interactive)
   (setf *shell-path* (read-string "shell path: ")))
