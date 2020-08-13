@@ -25,7 +25,7 @@
   (interactive)
   (setf *term-buf-name* (read-string "New name: ")))
 
-(defun send-region-to-term nil
+(defun send-term/send-region nil
   "Send mark regeion string to *terminal* buffer with \n end."
   (interactive)
   (unless (get-buffer *term-buf-name*)
